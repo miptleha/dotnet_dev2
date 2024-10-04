@@ -764,21 +764,21 @@ foreach (var num in query) //выполнили
 
 <details><summary>78. Как в ASP.NET WebAPI настроить кэширование ответов на HTTP-запросы?</summary>
 
-На уровне middleware:  
+>На уровне middleware:  
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddResponseCaching();
 var app = builder.Build()
 app.UseResponseCaching();
 ```
-На уровне контроллера:  
+>На уровне контроллера:  
 ```csharp
 [ResponseCache(Duration = 60, Location = ResponseCacheLocation.Client)]
 [Route("api/[controller]")]
 [ApiController]
 public class ValuesController : ControllerBase { ... }
 ```
-На уровне метода контроллера:  
+>На уровне метода контроллера:  
 ```csharp
 [HttpGet("{id}")]
 [ResponseCache(Duration =60,Location =ResponseCacheLocation.Client)]
