@@ -1257,9 +1257,9 @@ Console.WriteLine($"Плохие дни: {badDays}");
 >Также можно использовать типы записей (records).  
 ```csharp
 public record Order {
-    public int Id { get; init set; }
-    public string Status { get; init set; }
-    public bool IsPaid { get; init set; }
+    public int Id { get; init; }
+    public string Status { get; init; }
+    public bool IsPaid { get; init; }
 }
 ```
 >Свойство, сеттер которого отмечен как init, может быть присвоено только при создании экземпляра объекта. Любая попытка впоследствии изменить значение одного из таких свойств приведёт к ошибке компиляции. 
@@ -1505,5 +1505,4 @@ public record Order {
 >Таким образом, очереди используются, когда нужно гарантировать, что каждое сообщение обрабатывается одним получателем только один раз, а топики — когда нужно транслировать сообщения нескольким подписчикам на основе их интересов или критериев.
 </details>
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmiptleha%2Fdotnet_dev2&count_bg=%230C7DBD&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-
+[![hits](https://myhits.vercel.app/api/hit/https%3A%2F%2Fgithub.com%2Fmiptleha%2Fdotnet_dev2?color=blue&label=hits&size=small)](https://myhits.vercel.app)
